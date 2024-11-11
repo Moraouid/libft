@@ -6,7 +6,7 @@
 /*   By: sel-abbo <sel-abbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 02:01:20 by sel-abbo          #+#    #+#             */
-/*   Updated: 2024/11/08 18:47:26 by sel-abbo         ###   ########.fr       */
+/*   Updated: 2024/11/09 22:36:15 by sel-abbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	str = *lst;
 	while (str)
 	{
-		tmp = str;
-		str = str->next;
-		del(tmp->content);
-		free(tmp);
+		tmp = str->next;
+		ft_lstdelone(str, del);
+		str = tmp;
 	}
 	*lst = NULL;
 }

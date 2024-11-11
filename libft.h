@@ -6,7 +6,7 @@
 /*   By: sel-abbo <sel-abbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:15:56 by sel-abbo          #+#    #+#             */
-/*   Updated: 2024/11/07 04:49:12 by sel-abbo         ###   ########.fr       */
+/*   Updated: 2024/11/09 11:05:03 by sel-abbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
